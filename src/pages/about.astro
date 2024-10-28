@@ -1,9 +1,6 @@
 ---
-import '../styles/global.css';
 const pageTitle = "About Me";
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const identity = {
   firstName: "Pratham",
   country: "India",
@@ -21,22 +18,8 @@ const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		
-	</head>
-	<body>
-	    <h1>My Astro Site about page</h1>
-        <Header/>
-
-        <h1>{pageTitle}</h1>
-        <h2>... and my new Astro site!</h2>
+<BaseLayout pageTitle = {pageTitle}>
+	<h1>... and my new Astro site!</h1>
         <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
         <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
 
@@ -55,8 +38,6 @@ const textCase = "uppercase";
 	{happy && <p>I am happy</p>}
 	{finished && <p>I am finished</p>}
 	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
-	<Footer/>
-	</body>
 	<style define:vars={{skillColor, fontWeight, textCase}}>
 		h1 {
 		  color: purple;
@@ -68,7 +49,5 @@ const textCase = "uppercase";
     		text-transform: var(--textCase);
 		  }
 	</style>
-	<script>
-		import "../scripts/menu.js";
-	</script>
-</html>
+</BaseLayout>
+        
