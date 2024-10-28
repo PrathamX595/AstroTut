@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 const pageTitle = "About Me";
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 
 const identity = {
   firstName: "Pratham",
@@ -31,9 +33,7 @@ const textCase = "uppercase";
 	</head>
 	<body>
 	    <h1>My Astro Site about page</h1>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/blog/">Blog</a>
+        <Header/>
 
         <h1>{pageTitle}</h1>
         <h2>... and my new Astro site!</h2>
@@ -55,6 +55,7 @@ const textCase = "uppercase";
 	{happy && <p>I am happy</p>}
 	{finished && <p>I am finished</p>}
 	{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+	<Footer/>
 	</body>
 	<style define:vars={{skillColor, fontWeight, textCase}}>
 		h1 {
@@ -67,4 +68,7 @@ const textCase = "uppercase";
     		text-transform: var(--textCase);
 		  }
 	</style>
+	<script>
+		import "../scripts/menu.js";
+	</script>
 </html>
