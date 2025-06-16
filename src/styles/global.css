@@ -41,14 +41,14 @@ h1 {
   width: 40px;
   height: 5px;
   margin-bottom: 10px;
-  background-color: #ff9776;
+  background-color: #76e4ff;
 }
 
 .nav-links {
   width: 100%;
   top: 5rem;
   left: 48px;
-  background-color: #ff9776;
+  background-color: #76e4ff;
   display: none;
   margin: 0;
 }
@@ -64,7 +64,8 @@ h1 {
 }
 
 .nav-links a:hover, a:focus {
-  background-color: #ff9776;
+  background-color: #76e4ff;
+  color: #000;
 }
 
 .expanded {
